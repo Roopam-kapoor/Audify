@@ -1,0 +1,257 @@
+body {
+    background-image: linear-gradient(to bottom, rgb(208, 220, 177), rgb(130, 145, 94));
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #333333;
+    margin-top: 0px;
+    color: rgb(0, 0, 0);
+}
+
+.header {
+    overflow: hidden;
+    left: 11%;
+    position: fixed;
+
+    top: 8%;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.main-box {
+    margin-top: 8vmax;
+}
+
+.title {
+    color: rgb(14, 61, 22);
+    font-size: 50px;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logout {
+
+    padding: 1.5vmax 2vmax;
+    /* Increased padding for better visibility */
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    /* Positioned at the center vertically */
+    right: 2vmax;
+    transform: translateY(-50%);
+
+    /* Adjusted vertical alignment */
+}
+
+.add {
+    position: absolute;
+    bottom: 1vmax;
+    right: 1vmax;
+}
+
+.container {
+    display: block;
+    background-image: linear-gradient(to right, rgb(208, 220, 177), rgb(130, 145, 94));
+    width: 80%;
+    height: 48vmax;
+    margin: auto;
+    margin-top: 3vmax;
+    background-size: cover;
+    padding: 1vmax 4vmax;
+    box-shadow: 4px 10px 40px 2px rgb(99, 98, 98);
+    position: relative;
+}
+
+.audio-details {
+    font-size: 1.5vmax;
+    background-color: rgba(195, 197, 197, 0.339);
+    display: flex;
+    align-items: center;
+    /* Vertically center the content */
+    border-radius: 1vmax;
+    width: 90%;
+    height: auto;
+    /* Change height to auto for dynamic height */
+    margin: auto;
+    margin-bottom: 2vmax;
+    padding: 1vmax 2vmax;
+    /* Adjust padding for better spacing */
+    cursor: pointer;
+}
+
+.audio-name {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2vmax;
+    padding: 0 2vmax;
+    /* Adjust padding for better spacing */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
+    /* Distribute remaining space evenly among audio-name and audio-info */
+}
+
+.audio-info {
+    font-weight: 500;
+    padding-left: 2vmax;
+    border-left: 2px solid saddlebrown;
+    flex: 1;
+    /* Distribute remaining space evenly among audio-name and audio-info */
+}
+
+.delete {
+    padding-top: 0.3vmax;
+    padding-right: 0.5vmax;
+}
+
+.audio-link {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.audio-link:hover {
+    background-color: rgb(153, 150, 150);
+    border-radius: 20px;
+}
+
+.add-project {
+    position: fixed;
+    bottom: 1vmax;
+    left: 1vmax;
+    width: 100%;
+}
+
+.create-project-form {
+    width: 100%;
+    margin-left: 20%;
+    margin-bottom: 1vmax;
+    display: flex;
+
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.add-project button {
+    background-color: rgb(153, 150, 150);
+    color: rgb(14, 61, 22);
+    border-radius: 15px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.project-input {
+    width: 80%;
+    max-width: 400px;
+    /* Set a maximum width for responsiveness */
+    height: 4vmax;
+    border-radius: 15px;
+    padding-left: 1vmax;
+    font-size: large;
+    margin-bottom: 4vmax;
+}
+
+.info-box {
+    overflow: auto;
+    height: 30vmax;
+    margin-top: 2vmax;
+}
+.video-preview .remove-button {
+    border: 0px;
+    width: 100px;
+    border-radius: 10px;
+    height: 25px;
+    background-color: antiquewhite;
+    color: #111;
+    cursor: pointer;
+
+}
+
+.video-preview .Extract-button {
+    border: 0px;
+    border-radius: 10px;
+    height: 50px;
+    width: 200px;
+    margin-top: 30px;
+    cursor: pointer;
+    background-color: antiquewhite;
+    color: #111;
+}
+
+.drop-container {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px dashed #555;
+    color: #444;
+    cursor: pointer;
+    width: 50%;
+    left: 20%;
+    transition: background .2s ease-in-out, border .2s ease-in-out;
+}
+
+.drop-container:hover {
+    background: rgba(195, 197, 197, 0.339);
+    ;
+    border-color: #111;
+}
+
+.drop-container:hover .drop-title {
+    color: #222;
+}
+
+.drop-title {
+    color: #444;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    transition: color .2s ease-in-out;
+}
+
+.drop-container ::file-selector-button {
+    background-color: antiquewhite;
+    border: 0;
+    color: #111;
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.or-divider {
+    padding: 10px;
+
+}
+
+.upload-box .video-link {
+
+    height: 25px;
+    width: 300px;
+    border-radius: 10px;
+    border: 0px;
+    background-color: blanchedalmond;
+    padding: 1vmax;
+
+}
+
+.upload-box .video-button {
+    font-weight: bold;
+    font-size: large;
+    width: 8vmax;
+    height: 3vmax;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: antiquewhite;
+    border: none;
+    margin-left: 2vmax;
+}

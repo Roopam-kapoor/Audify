@@ -1,0 +1,15 @@
+.project-container{
+    text-align: center;
+    align-items: center;
+    margin-top: 5vmax;
+    height: 40vmax;
+    scroll-behavior: auto;
+    overflow: auto;
+}
+.caption-textarea{
+    background-color: rgb(118, 100, 76);
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
