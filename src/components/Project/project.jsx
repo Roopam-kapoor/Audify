@@ -27,7 +27,7 @@ const ProjectPage = () => {
   const [extractedAudioURL, setExtractedAudioURL] = useState("");
   const [captions, setCaptions] = useState("");
   const [loadingCaptions, setLoadingCaptions] = useState(false);
-  const [videoDuration, setVideoDuration] = useState("");
+  
   const playerRef = useRef(null);
 
   useEffect(() => {
@@ -102,16 +102,6 @@ const ProjectPage = () => {
     };
   }, []);
 
-  useEffect(() => {
-    // Fetch video duration using ReactPlayer
-    if (previewURL) {
-      const video = document.createElement("video");
-      video.src = previewURL;
-      video.addEventListener("loadedmetadata", () => {
-        setVideoDuration(formatVideoDuration(video.duration));
-      });
-    }
-  }, [previewURL]);
 
   if (loading) {
     return <p>Loading project..</p>; // Render a loading message while the project is being fetched
@@ -144,11 +134,7 @@ const ProjectPage = () => {
       console.error("Error uploading video file:", error);
     }
   };
-  const formatVideoDuration = (duration) => {
-    const minutes = Math.floor(duration / 60);
-    const seconds = Math.floor(duration % 60);
-    return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
-  };
+  
 
   const handleVideoLinkChange = (e) => {
     setVideoLink(e.target.value);
