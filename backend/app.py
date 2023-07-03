@@ -29,19 +29,7 @@ r = sr.Recognizer()
 def extract_audio():
     try:
         video_url = request.json.get('videoURL')
-        ytube_url = request.form['videoURL']
-
-        if 'youtube.com' in ytube_url or 'youtu.be' in ytube_url:
-            yt = YouTube(ytube_url)
-            audio = yt.streams.filter(only_audio=True).first()
-
-            if audio:
-                audio_filename = f'audio/{yt.video_id}.mp3'
-                audio_path = os.path.join(app.config['UPLOAD_FOLDER'], audio_filename)
-                audio.download(output_path=app.config['UPLOAD_FOLDER'], filename=yt.video_id)
-
-                audio_url = f"{request.host_url}download/{audio_filename}"
-                return jsonify({'audioFile': audio_url})
+        
     
         if video_url:
             # Download the video file from the provided URL
